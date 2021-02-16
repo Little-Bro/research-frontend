@@ -1,0 +1,33 @@
+#link {
+  text-align: center;
+}
+
+#gitbutton {
+  position: absolute;
+  top: 400px;
+  left: 675px;
+}
+
+#citi {
+  position: absolute;
+  top: 50px;
+  left: 500px;
+}
+
+#grame {
+  position: absolute;
+  top: 25px;
+  left: 800px;
+}
+
+#descriptif {
+  position: absolute;
+  top: 350px;
+  left: 460px;
+}
+
+h1 {
+  position: absolute;
+  top: 250px;
+  left: 450px;
+}
