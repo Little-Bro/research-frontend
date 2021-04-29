@@ -18,7 +18,7 @@ Compile and upload the pot_sketch.ino file to your Arduino (if you open the seri
 clone the p5.serialport repo : https://github.com/p5-serial/p5.serialport  
 npm install in that directory  
 sudo node startserver.js  
-This shoud start up the server that'll read serial data coming from Arduino sketch.  
+This shoud start up the server that'll read the serial data coming in from your Arduino.  
 
 Open up the index.html file with your browser and click on 'Interface' in the top left corner.
 Play with the potentiometers, you should see the sinewave amplitude and period change in real time.
