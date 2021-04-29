@@ -21,4 +21,6 @@ sudo node startserver.js
 This shoud start up the server that'll read the serial data coming in from your Arduino.  
 
 Open up the index.html file with your browser and click on 'Interface' in the top left corner.
-Play with the potentiometers, you should see the sinewave amplitude and period change in real time.
+Play with the potentiometers, you should see the sinewave amplitude and period change in real time.  
+
+![photoSPI](https://user-images.githubusercontent.com/22426678/116568299-a9e32400-a908-11eb-8519-f616e32d5aca.png)
