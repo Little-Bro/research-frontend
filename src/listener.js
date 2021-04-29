@@ -26,17 +26,17 @@ const listenerSketch = (p) => {
 
   // We are connected and ready to go
   function serverConnected() {
-      print("We are connected!");
+      console.log("We are connected!");
   }
 
   // Connected to our serial device
   function gotOpen() {
-    print("Serial Port is open!");
+    console.log("Serial Port is open!");
   }
 
   // Ut oh, here is an error, let's log it
   function gotError(theerror) {
-    print(theerror);
+    console.log(theerror);
   }
 
   // There is data available to work with from the serial port
