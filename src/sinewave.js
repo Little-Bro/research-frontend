@@ -1,25 +1,11 @@
 const waveSketch = function (p5) {
-  // global variables
   let wave;
-  let sliderP, sliderA; // sliders
-  let colour, bgColour; // wave colour/background colour
-  let pA, pP; // Amplitude/Period text below sliders
+  let colour, bgColour;
 
   p5.setup = () => {
-    // settings
     p5.angleMode(p5.DEGREES);
     p5.createCanvas(400, 400);
     wave = new Wave(50, 300, 10);
-    // HTML elements
-    sliderP = p5.createSlider(2, 5, 3);
-    sliderA = p5.createSlider(2, 100, 51);
-    sliderP.position(10, 410);
-    sliderA.position(200, 410);
-    pA = p5.createP('amplitude');
-    pP = p5.createP('période');
-    pP.position(80, 425);
-    pA.position(260, 425);
-    // colours
     colour = p5.color(p5.random(255), p5.random(255), p5.random(255));
     bgColour = p5.color(0);
   };
@@ -28,8 +14,19 @@ const waveSketch = function (p5) {
     p5.fill(255);
     p5.textSize(32);
     p5.background(bgColour);
-    wave.period = sliderP.value();
-    wave.amplitude = sliderA.value();
+    
+    // get potentiometer data from localStorage
+    amp = localStorage.getItem('pot1');
+    per = localStorage.getItem('pot2');
+
+    // map data
+    amp = p5.map(amp, 0, 1023, 2, 100);
+    per = p5.map(per, 0, 1023, 2, 5);
+
+    // set data
+    wave.amplitude = amp;
+    wave.period = per;
+
     p5.strokeWeight(2);
     // prevents the wave from being the same colour as the background
     colour = colour != bgColour ? colour : p5.color(255);
