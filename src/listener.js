@@ -34,7 +34,7 @@ const listenerSketch = (p) => {
     console.log("Serial Port is open!");
   }
 
-  // Ut oh, here is an error, let's log it
+  // There's an error (#-_-)
   function gotError(theerror) {
     console.log(theerror);
   }
