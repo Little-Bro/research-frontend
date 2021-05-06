@@ -47,12 +47,14 @@ const listenerSketch = (p) => {
       let serial_inputs = currentString.split('/');
       let val1 = serial_inputs[0]; // first potentiometer
       let val2 = serial_inputs[1]; // second potentiometer
+      let val3 = serial_inputs[2]; // button 
       // placing data in localStorage 
       // this is where the other skecthes will fetch the values
       localStorage.setItem('pot1', val1);
       localStorage.setItem('pot2', val2);
+      localStorage.setItem('butt1', val3);
     } 
   }
 };
 
-let s3 = new p5(listenerSketch, 'sinewave');
+let s3 = new p5(listenerSketch, 'listener');
