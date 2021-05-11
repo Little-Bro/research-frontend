@@ -1,8 +1,5 @@
 const circleSketch = (p5) => {
   // global variables
-  let y;
-  let maxHeight;
-  let descriptionText;
 
   p5.setup = () => {
     p5.createCanvas(400,400);
